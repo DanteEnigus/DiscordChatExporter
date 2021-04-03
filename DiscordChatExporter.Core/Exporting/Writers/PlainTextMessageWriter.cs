@@ -98,7 +98,7 @@ namespace DiscordChatExporter.Core.Exporting.Writers
 
             foreach (var reaction in reactions)
             {
-                await _writer.WriteAsync(reaction.Emoji.Name);
+                await _writer.WriteAsync(reaction.Emoji.Id);
 
                 if (reaction.Count > 1)
                     await _writer.WriteAsync($" ({reaction.Count})");
